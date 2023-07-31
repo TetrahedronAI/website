@@ -9,9 +9,9 @@
   </div>
   <div class="mr-10">
     <ul class="flex gap-10 text-lg">
-      <li><a href="/about">About</a></li>
-      <li><a href="/research">Research</a></li>
-      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/">Research</a></li>
+      <li><a href="/">Contact Us</a></li>
     </ul>
   </div>
 </div>
