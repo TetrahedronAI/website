@@ -1,0 +1,70 @@
+/** Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: "Syne", serif;
+    @apply text-base-content bg-base
+      selection:bg-secondary selection:bg-opacity-50;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    @apply bg-base;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: rgba(25, 25, 25, 0.8);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md bg-opacity-10;
+  }
+
+  .grid-center {
+    @apply grid place-items-center;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .blur-circle {
+    @apply absolute blur-3xl rounded-full w-96 opacity-50 aspect-square;
+  }
+
+  .blur-circle:nth-child(2n) {
+    animation-delay: 1s;
+  }
+
+  .animate-float {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: float 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      translate: 0 0px 0;
+    }
+
+    50% {
+      translate: 0 -1.5rem 0;
+    }
+
+    100% {
+      translate: 0 0px 0;
+    }
+  }
+}
