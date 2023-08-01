@@ -13,7 +13,7 @@
     <a href="/">
       <picture>
         <source media="(min-width:640px)" srcset="/imgs/wordmark.svg" />
-        <img src="/imgs/icon.svg" alt="Logo" height="56" width="56" />
+        <img src="/imgs/icon.svg" alt="Logo" height="56" />
       </picture>
     </a>
   </div>
