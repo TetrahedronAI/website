@@ -5,9 +5,10 @@
 
 <div
   id="nav"
-  class="fixed flex justify-between backdrop-blur-sm px-4 py-2 w-full z-40"
+  class="fixed flex justify-between backdrop-blur-sm px-4 py-2 w-screen z-40 h-16 items-center"
 >
-  <div class="w-full h-full absolute grainy opacity-50 pointer-events-none" />
+  <div class="w-screen h-16 absolute top-0 left-0 grainy opacity-40" />
+
   <div class="z-50">
     <a href="/">
       <picture>
@@ -17,7 +18,7 @@
     </a>
   </div>
   <div class="sm:mr-10">
-    <div class="hidden sm:flex gap-10 text-lg translate-y-4">
+    <div class="hidden sm:flex gap-10 text-lg">
       <Navlinks />
     </div>
     <button
