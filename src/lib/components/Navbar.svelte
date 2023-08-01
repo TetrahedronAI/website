@@ -13,7 +13,7 @@
     <a href="/">
       <picture>
         <source media="(min-width:640px)" srcset="/imgs/wordmark.svg" />
-        <img src="/imgs/icon.svg" alt="Flowers" class="h-14" />
+        <img src="/imgs/icon.svg" alt="Logo" height="56" width="56" />
       </picture>
     </a>
   </div>
@@ -22,6 +22,8 @@
       <Navlinks />
     </div>
     <button
+      aria-label="Menu"
+      type="button"
       class="grid-center aspect-square sm:hidden"
       on:click={() => (hamburgerOpen = !hamburgerOpen)}
     >

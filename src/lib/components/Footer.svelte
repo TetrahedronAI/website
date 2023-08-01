@@ -1,6 +1,8 @@
 <footer>
   <div>
     <img
+      width="80"
+      height="80"
       src="/imgs/icon.svg"
       alt="Tetrahedron AI Logo Icon"
       class="w-20 sm:mr-12 md:mr-24"

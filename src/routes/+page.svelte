@@ -40,6 +40,8 @@
     <button
       class="absolute bottom-4 w-screen z-50 h-fit"
       on:click={() => window.scrollTo({ top: window.innerHeight })}
+      aria-label="Scroll Down"
+      type="button"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +88,8 @@
               </p>
             </div>
             <img
+              width="384"
+              height="384"
               src="/imgs/icon.svg"
               alt="Logo"
               class="-z-30 h-96 blur-md animate-float-sm"
