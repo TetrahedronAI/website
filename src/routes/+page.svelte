@@ -150,7 +150,7 @@
             {#each [...projects.entries()] as [i, prj]}
               <a
                 href={prj.url}
-                in:fly={{ duration: 0, delay: 0 * 700 + 0 * 200 * i, y: 30 }}
+                in:fly={{ duration: 300, delay: 700 + 200 * i, y: 30 }}
               >
                 <div>
                   <h1>{prj.name}</h1>
