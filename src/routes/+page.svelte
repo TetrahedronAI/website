@@ -56,55 +56,56 @@
   </section>
 
   <IntersectionObserver element={aboutNode} let:intersecting>
-    <section
-      class="flex flex-col justify-center items-center"
-      bind:this={aboutNode}
-    >
-      {#if intersecting}
-        <h1
-          in:fly={{
-            duration: 500,
-            y: -30,
-            delay: 300,
-          }}
-          class="text-6xl font-bold -translate-y-56 opacity-90"
-        >
-          We're Tetrahedron AI
-        </h1>
-        <div class="flex justify-around items-center px-3 text-center absolute">
-          <div
+    <section class="grid-center">
+      <div bind:this={aboutNode} class="flex-center flex-col h-[70vh]">
+        {#if intersecting}
+          <h1
             in:fly={{
               duration: 500,
-              x: -30,
+              y: -30,
               delay: 500,
             }}
-            class="md:w-1/3 md:px-10 text-2xl opacity-90"
+            class="text-6xl font-bold -translate-y-56 opacity-90"
           >
-            <p>
-              A group of students working to improve the efficiency and
-              accessibility of machine learning.
-            </p>
-          </div>
-          <img
-            src="/imgs/icon.svg"
-            alt="Logo"
-            class="-z-30 h-96 blur-md animate-float-sm"
-          />
+            We're Tetrahedron AI
+          </h1>
           <div
-            in:fly={{
-              duration: 500,
-              x: 30,
-              delay: 500,
-            }}
-            class="md:w-1/3 sm:px-10 text-2xl opacity-90"
+            class="flex justify-around items-center px-3 text-center absolute"
           >
-            <p>
-              We do this in the hope of improving the safety, inclusivity and
-              sustainability of AI technologies.
-            </p>
+            <div
+              in:fly={{
+                duration: 500,
+                x: -30,
+                delay: 700,
+              }}
+              class="md:w-1/3 md:px-10 text-2xl opacity-90"
+            >
+              <p>
+                A group of students working to improve the efficiency and
+                accessibility of machine learning.
+              </p>
+            </div>
+            <img
+              src="/imgs/icon.svg"
+              alt="Logo"
+              class="-z-30 h-96 blur-md animate-float-sm"
+            />
+            <div
+              in:fly={{
+                duration: 500,
+                x: 30,
+                delay: 700,
+              }}
+              class="md:w-1/3 sm:px-10 text-2xl opacity-90"
+            >
+              <p>
+                We do this in the hope of improving the safety, inclusivity and
+                sustainability of AI technologies.
+              </p>
+            </div>
           </div>
-        </div>
-      {/if}
+        {/if}
+      </div>
     </section>
   </IntersectionObserver>
 
@@ -145,7 +146,7 @@
             {#each [...projects.entries()] as [i, prj]}
               <a
                 href={prj.url}
-                in:fly={{ duration: 300, delay: 700 + 200 * i, y: 30 }}
+                in:fly={{ duration: 0, delay: 0 * 700 + 0 * 200 * i, y: 30 }}
               >
                 <div>
                   <h1>{prj.name}</h1>
@@ -178,7 +179,7 @@
 
   .projects div {
     @apply rounded-lg border border-base-content border-opacity-20
-    bg-gray-900 bg-opacity-30 p-5 max-w-sm backdrop-blur-lg h-44
+    bg-gray-900 bg-opacity-30 p-5 w-96 backdrop-blur-lg h-44
     grid place-items-center;
 
     h1 {
