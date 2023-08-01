@@ -8,7 +8,7 @@
 @layer base {
   :root {
     font-family: "Syne", serif;
-    @apply text-base-content bg-base
+    @apply text-base-content bg-base overflow-x-hidden
       selection:bg-secondary selection:bg-opacity-50;
   }
 
@@ -19,11 +19,7 @@
 
   ::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
-    background-color: rgba(25, 25, 25, 0.8);
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(25, 25, 25, 0.4);
   }
 }
 
@@ -41,30 +37,34 @@
   }
 
   .blur-circle {
-    @apply absolute blur-3xl rounded-full w-96 opacity-50 aspect-square;
+    @apply blur-2xl rounded-full opacity-50 aspect-square;
   }
 
   .blur-circle:nth-child(2n) {
     animation-delay: 1s;
   }
 
+  .grainy {
+    filter: url("/imgs/grain.svg#grainy") contrast(2);
+  }
+
   .animate-float {
     @media (prefers-reduced-motion: no-preference) {
-      animation: float 3s ease-in-out infinite;
+      animation: float 4s ease-in-out infinite;
     }
   }
 
   @keyframes float {
     0% {
-      translate: 0 0px 0;
+      transform: translateY(0px);
     }
 
     50% {
-      translate: 0 -1.5rem 0;
+      transform: translateY(-2rem);
     }
 
     100% {
-      translate: 0 0px 0;
+      transform: translateY(0px);
     }
   }
 }

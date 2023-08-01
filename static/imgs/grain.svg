@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="grainy">
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.5"
+    />
+  </filter>
+</svg>
