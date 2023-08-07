@@ -5,11 +5,12 @@
 
 <div
   id="nav"
-  class="fixed flex justify-between backdrop-blur-sm px-4 py-2 w-screen z-40 h-16 items-center"
+  class="fixed flex justify-between backdrop-blur-sm px-4 py-2 z-40 h-16 items-start top-0 left-0 w-screen
+  transition duration-100 ease-in-out"
 >
   <div class="w-screen h-16 absolute top-0 left-0 grainy opacity-40" />
 
-  <div class="z-50">
+  <div class="z-50 -translate-y-1">
     <a href="/">
       <picture>
         <source media="(min-width:640px)" srcset="/imgs/wordmark.svg" />
@@ -18,7 +19,7 @@
     </a>
   </div>
   <div class="sm:mr-10">
-    <div class="hidden sm:flex gap-10 text-lg">
+    <div class="hidden sm:flex gap-10 text-lg translate-y-2">
       <Navlinks />
     </div>
     <button
@@ -69,9 +70,9 @@
   }
 
   .content {
-    @apply transition duration-300 ease-in-out text-center
+    @apply transition duration-300 ease-in-out text-center fixed
         w-screen grid place-items-center h-screen z-40 backdrop-blur-sm
-        fixed top-0 left-0 text-2xl bg-base bg-opacity-40;
+        top-0 left-0 text-2xl bg-base bg-opacity-40;
 
     div {
       @apply flex flex-col gap-5 rounded-lg p-5;

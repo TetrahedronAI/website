@@ -12,6 +12,10 @@
       scroll-smooth selection:bg-base-content selection:text-base;
   }
 
+  body {
+    @apply w-screen;
+  }
+
   ::-webkit-scrollbar {
     width: 0.8rem;
     @apply bg-base;
@@ -24,10 +28,6 @@
 }
 
 @layer utilities {
-  .glass {
-    @apply backdrop-blur-md bg-opacity-10;
-  }
-
   .grid-center {
     @apply grid place-items-center;
   }
@@ -80,7 +80,7 @@
     }
 
     50% {
-      transform: translateY(-.5rem);
+      transform: translateY(-0.5rem);
     }
 
     100% {

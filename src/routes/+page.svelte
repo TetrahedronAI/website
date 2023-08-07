@@ -31,7 +31,6 @@
 </script>
 
 <div class="w-screen h-[300vh] absolute grainy -z-20" />
-
 <main class="w-screen">
   <section>
     <Circles />
@@ -72,7 +71,7 @@
             We're Tetrahedron AI
           </h1>
           <div
-            class="flex justify-around items-center px-3 text-center absolute"
+            class="flex flex-col sm:flex-row justify-around items-center px-3 text-center absolute"
           >
             <div
               in:fly={{
@@ -98,7 +97,7 @@
               in:fly={{
                 duration: 500,
                 x: 30,
-                delay: 700,
+                delay: 900,
               }}
               class="md:w-1/3 sm:px-10 text-2xl opacity-90"
             >
@@ -113,7 +112,7 @@
     </section>
   </IntersectionObserver>
 
-  <section class="grid-center">
+  <section class="grid-center overflow-x-hidden">
     <div class="circle-container">
       <div
         class="blur-circle animate-float bg-cyan-400 mr-[20vmax] w-[40vmax]"
@@ -133,7 +132,7 @@
           <div>
             <h1
               in:fly={{ duration: 500, x: -30, delay: 300 }}
-              class="font-bold text-4xl mb-2"
+              class="font-bold text-2xl sm:text-4xl mb-2"
             >
               Inclusive, Open Development
             </h1>
@@ -146,11 +145,12 @@
             </p>
           </div>
 
-          <div class="max-w-screen justify-center flex gap-3 projects">
+          <div class="max-w-screen justify-center flex flex-col md:flex-row gap-3 projects">
             {#each [...projects.entries()] as [i, prj]}
               <a
+              class="flex-center"
                 href={prj.url}
-                in:fly={{ duration: 300, delay: 700 + 200 * i, y: 30 }}
+                in:fly={{ duration: 300, delay: 800 + 200 * i, y: 30 }}
               >
                 <div>
                   <h1>{prj.name}</h1>
@@ -174,7 +174,7 @@
 
 <style lang="postcss">
   section {
-    @apply h-screen w-full;
+    @apply h-screen w-full overflow-x-hidden;
 
     .content {
       @apply z-30;
@@ -192,6 +192,6 @@
   }
 
   .circle-container {
-    @apply absolute grid place-items-center w-full h-full mt-14;
+    @apply absolute grid place-items-center w-full h-full mt-14 overflow-x-hidden;
   }
 </style>
