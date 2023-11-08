@@ -37,7 +37,7 @@
 </script>
 
 <div
-  class="absolute px-4 sm:px-8 h-screen flex-col flex pt-[20vh] tiny:pt-0 tiny:justify-center"
+  class="absolute px-4 ml-24 sm:px-8 h-screen flex-col flex pt-[20vh] tiny:pt-0 tiny:justify-center"
 >
   <h1 class="opacity-80 text-4xl tiny:text-5xl sm:text-6xl max-w-[90vw]">
     <span>Developing <br class="tiny:hidden" />AI for</span><br />
