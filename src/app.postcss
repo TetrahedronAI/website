@@ -5,53 +5,14 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    font-family: "Syne", sans-serif;
-    @apply bg-base text-base-content;
-  }
-
-  section {
-    @apply w-full h-screen;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-base;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-t from-secondary to-primary rounded-full;
-  }
-}
-
-@layer components {
-  .circle {
-    @apply rounded-[100%];
-
-    &.wide {
-      @apply w-full aspect-square;
-    }
-
-    &.landing {
-      @apply relative top-2/3 scale-y-75 scale-x-150;
-    }
-  }
-
-  .button {
-    @apply hover:scale-110 hover:bg-gradient-to-r hover:from-primary hover:to-secondary
-      transition duration-150 ease-in-out;
-
-    &.lozenge {
-      @apply py-2 px-6 rounded-full;
-    }
+  body {
+    font-family: "Syne", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @apply m-0 bg-base text-base-content;
   }
 }
 
 @layer utilities {
-  .brand-gradient {
-    background: linear-gradient(to top left, rgb(108 229 255), rgb(108 229 255), #AF6CF2);
+  .brand-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
 }
